@@ -10,17 +10,23 @@ import { AnimatedBackground } from "../../../../components/AnimatedBackground/An
 
 
 
+
 const Hero = () => {
 
-  const StyledHero = styled("div")(({ theme }) => ({
-    backgroundColor: theme.palette.primary.contrastText,
+  const StyledHero = styled("div")(({theme }) => ({
+    backgroundColor: theme.palette.primary.main,
     height: "100vh",
     display: "flex",
     alignItems: "center",
+    [theme.breakpoints.up('xs')]:{
+      paddingTop: "100px"
+    },
+    [theme.breakpoints.up('md')]:{
+      paddingTop: "0"}
   }))
 
   const StyledImg = styled("img")(({ theme }) => ({
-    width: "80%",
+    width: "59%",
     borderRadius: "50%",
     border: `1px solid ${theme.palette.primary.contrastText}`
   }))
@@ -54,6 +60,7 @@ const Hero = () => {
               <Grid container display="flex" justifyContent="center" spacing={3} pt={3}>
                 <Grid item xs={12} md={4} display="flex" justifyContent="center">
 
+                  
                   <StyledButton>
 
                     <DownloadIcon />
@@ -62,6 +69,7 @@ const Hero = () => {
                     </Typography>
 
                   </StyledButton>
+                  
 
 
                 </Grid>
