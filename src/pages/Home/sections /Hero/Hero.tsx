@@ -61,7 +61,7 @@ const Hero = () => {
                 <Grid item xs={12} md={4} display="flex" justifyContent="center">
 
                   
-                  <StyledButton>
+                  <StyledButton onClick={()=> console.log("Download")}>
 
                     <DownloadIcon />
                     <Typography>
@@ -74,7 +74,7 @@ const Hero = () => {
 
                 </Grid>
                 <Grid item xs={12} md={4} display="flex" justifyContent="center">
-                  <StyledButton>
+                  <StyledButton onClick={()=> console.log("Contato")}>
 
                     <EmailIcon />
                     <Typography>
